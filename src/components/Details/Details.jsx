@@ -31,15 +31,15 @@ const Details = ({
 
 Details.propTypes = {
   id: PropTypes.number,
-  campaign_name: PropTypes.string.isRequired,
-  current_amount: PropTypes.number.isRequired,
-  goal: PropTypes.number.isRequired,
-  percentage: PropTypes.number.isRequired,
-  donors: PropTypes.number.isRequired,
-  location: PropTypes.string.isRequired,
-  img_url: PropTypes.string.isRequired,
-  link_url: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  campaign_name: PropTypes.string,
+  current_amount: PropTypes.number,
+  goal: PropTypes.number,
+  percentage: PropTypes.number,
+  donors: PropTypes.number,
+  location: PropTypes.string,
+  img_url: PropTypes.string,
+  link_url: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default Details;

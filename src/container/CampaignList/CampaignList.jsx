@@ -6,14 +6,14 @@ const CampaignList = () => {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
-    fetchList().then((campaignFetch) => setCampaigns(campaignFetch));
+    fetchList().then((apiCampaigns) => setCampaigns(apiCampaigns));
   }, []);
 
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
-  return { campaignNodes };
+  return <>{campaignNodes}</>;
 };
 
 export default CampaignList;

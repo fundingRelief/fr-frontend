@@ -9,7 +9,7 @@ export default function App() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="detail/:id?" component={CampaignDetail} />
+        <Route exact path="/campaigns/:id?" component={CampaignDetail} />
         <Route exact path="/" component={CampaignList} />
       </Switch>
     </Router>

@@ -15,7 +15,7 @@ const List = ({
 }) => (
   <section>
     <h3>
-      <Link to={`detail/${id}`}>{campaign_name}</Link>
+      <Link to={`campaigns/${id}`}>{campaign_name}</Link>
     </h3>
     <h4>
       {current_amount} / {goal}
