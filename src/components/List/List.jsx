@@ -37,7 +37,7 @@ List.propTypes = {
   current_amount: PropTypes.number.isRequired,
   goal: PropTypes.number.isRequired,
   percentage: PropTypes.number.isRequired,
-  donors: PropTypes.string.isRequired,
+  donors: PropTypes.number.isRequired,
   location: PropTypes.string.isRequired,
   img_url: PropTypes.string.isRequired,
   link_url: PropTypes.string.isRequired,
