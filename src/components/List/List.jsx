@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router.dom';
 
 const List = ({
   id,
@@ -13,7 +14,9 @@ const List = ({
   link_url,
 }) => (
   <section>
-    <h3>{campaign_name}</h3>
+    <h3>
+      <Link to={`detail/${id}`}>{campaign_name}</Link>
+    </h3>
     <h4>
       {current_amount} / {goal}
     </h4>
