@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
-import CampaignList from '../../container/CampaignList';
-import CampaignDetail from '../../container/CampaignDetail';
+import CampaignList from '../../container/CampaignList/CampaignList';
+import CampaignDetail from '../../container/CampaignDetail/CampaignDetail';
 
 export default function App() {
   return (
