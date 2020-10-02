@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <section>
-        <h1>Header</h1>
+        <h1>funding relief for wildfire victims</h1>
       </section>
     </>
   );

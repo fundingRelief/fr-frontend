@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Details = ({
   campaign_name,
@@ -31,6 +32,9 @@ const Details = ({
       </a>
       <h4>{location}</h4>
       <p>{description}</p>
+      <h3>
+        <Link to={'/'}>back</Link>
+      </h3>
     </>
   );
 };
