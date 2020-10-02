@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders Header 1`] = `
+<Fragment>
+  <section>
+    <h1>
+      <Link
+        to="/"
+      >
+        funding relief for wildfire victims
+      </Link>
+    </h1>
+  </section>
+</Fragment>
+`;

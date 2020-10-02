@@ -7,7 +7,7 @@ exports[`App component renders App 1`] = `
     <Route
       component={[Function]}
       exact={true}
-      path="detail/:id?"
+      path="/campaigns/:id?"
     />
     <Route
       component={[Function]}

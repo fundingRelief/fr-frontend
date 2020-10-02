@@ -40,7 +40,7 @@ const Details = ({
 };
 
 Details.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   campaign_name: PropTypes.string.isRequired,
   current_amount: PropTypes.number.isRequired,
   goal: PropTypes.number.isRequired,
