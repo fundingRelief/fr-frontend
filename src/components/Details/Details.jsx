@@ -27,9 +27,11 @@ const Details = ({
         {percentage}% fulfilled by {donors} donors
       </h4>
       <img src={img_url} />
-      <a href={link_url} target="_blank" rel="noopener noreferrer">
-        link
-      </a>
+      <h4>
+        <a href={link_url} target="_blank" rel="noopener noreferrer">
+          GoFundMe link
+        </a>
+      </h4>
       <h4>{location}</h4>
       <p>{description}</p>
       <h3>
