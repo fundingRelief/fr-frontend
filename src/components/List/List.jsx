@@ -12,24 +12,30 @@ const List = ({
   location,
   img_url,
   link_url,
-}) => (
-  <section>
-    <h3>
-      <Link to={`campaigns/${id}`}>{campaign_name}</Link>
-    </h3>
-    <h4>
-      {current_amount} / {goal}
-    </h4>
-    <h4>
-      {percentage}% filled with {donors} donors
-    </h4>
-    <img src={img_url} />
-    <a href={link_url} target="_blank" rel="noopener noreferrer">
-      link
-    </a>
-    <h4>{location}</h4>
-  </section>
-);
+}) => {
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+  return (
+    <section>
+      <h3>
+        <Link to={`campaigns/${id}`}>{campaign_name}</Link>
+      </h3>
+      <h4>
+        ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
+        goal
+      </h4>
+      <h4>
+        {percentage}% fulfilled by {donors} donors
+      </h4>
+      <img src={img_url} />
+      <a href={link_url} target="_blank" rel="noopener noreferrer">
+        link
+      </a>
+      <h4>{location}</h4>
+    </section>
+  );
+};
 
 List.propTypes = {
   id: PropTypes.number.isRequired,

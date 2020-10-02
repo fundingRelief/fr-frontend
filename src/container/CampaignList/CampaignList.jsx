@@ -6,7 +6,7 @@ const CampaignList = () => {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
-    fetchList().then((apiCampaigns) => setCampaigns(apiCampaigns));
+    fetchList().then((fetchCampaignList) => setCampaigns(fetchCampaignList));
   }, []);
 
   const campaignNodes = campaigns.map((campaign) => {
