@@ -1,0 +1,21 @@
+header {
+  a {
+    text-decoration: none;
+  }
+
+  a:link {
+    color: purple;
+  }
+
+  a:visited {
+    color: purple;
+  }
+
+  a:hover {
+    color: purple;
+  }
+
+  a:active {
+    color: purple;
+  }
+}
