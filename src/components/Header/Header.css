@@ -4,18 +4,42 @@ header {
   }
 
   a:link {
-    color: purple;
+    color: white;
   }
 
   a:visited {
-    color: purple;
+    color: white;
   }
 
   a:hover {
-    color: purple;
+    color: white;
   }
 
   a:active {
-    color: purple;
+    color: white;
+  }
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 1fr;
+  grid-template-rows: 0.8fr;
+  grid-template-areas: 'logo User navbar';
+  background-color: rgba(40, 167, 118, 0.6);
+  color: white;
+  justify-items: flex-end;
+
+  .navbar {
+    grid-area: navbar;
+  }
+
+  .navLink {
+    margin-right: 1rem;
+  }
+
+  .logo {
+    grid-area: logo;
+    width: 18rem;
+    margin-left: 0.5rem;
   }
 }
