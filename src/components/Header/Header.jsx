@@ -9,6 +9,9 @@ const Header = () => {
         <h1>
           <Link to={'/'}>funding relief</Link>
         </h1>
+        <h4>
+          <Link to={'/about'}>about</Link>
+        </h4>
       </header>
     </>
   );

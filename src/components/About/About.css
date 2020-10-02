@@ -1,0 +1,56 @@
+a {
+  text-decoration: none;
+}
+
+.icons {
+  max-width: 1.5rem;
+  display: flex;
+  margin: 0.5rem auto 0.5rem;
+}
+
+.Devs p {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.Devs {
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.Dev {
+  font-size: 0.5rem;
+  width: 20%;
+  margin: 1rem;
+}
+
+.Dev img {
+  display: block;
+  width: 80%;
+  border-radius: 90%;
+  margin: 0 auto;
+}
+
+.links img {
+  width: 12%;
+  border-radius: 90%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  display: inline-flex;
+  text-align: right;
+}
+
+.fundingReliefHeader {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.para {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+}
