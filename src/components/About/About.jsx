@@ -14,7 +14,7 @@ const About = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h1 className={styles.fundingReliefHeader}>Funding Relief</h1>
+          <h1 className={styles.fundingReliefHeader}>funding relief</h1>
           <img src={githubIcon} alt="github-icon" className={styles.icons} />
         </a>
         <p className={styles.para}>

@@ -1,0 +1,22 @@
+.List {
+  font-family: 'Comfortaa', cursive;
+  a {
+    text-decoration: none;
+  }
+
+  a:link {
+    color: rgba(40, 167, 118, 0.6);
+  }
+
+  a:visited {
+    color: rgba(40, 167, 118, 0.6);
+  }
+
+  a:hover {
+    color: rgb(50, 150, 207);
+  }
+
+  a:active {
+    color: rgba(40, 167, 118, 0.6);
+  }
+}

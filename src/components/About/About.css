@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+.About {
+  font-family: 'Comfortaa', cursive;
+}
+
 .icons {
   max-width: 1.5rem;
   display: flex;
@@ -52,5 +56,5 @@ a {
   width: 50%;
   text-align: center;
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }

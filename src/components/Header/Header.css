@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 header {
   a {
     text-decoration: none;
@@ -12,7 +14,7 @@ header {
   }
 
   a:hover {
-    color: white;
+    color: rgb(50, 150, 207);
   }
 
   a:active {
@@ -28,6 +30,7 @@ header {
   background-color: rgba(40, 167, 118, 0.6);
   color: white;
   justify-items: flex-end;
+  font-family: 'Comfortaa', cursive;
 
   .navbar {
     grid-area: navbar;

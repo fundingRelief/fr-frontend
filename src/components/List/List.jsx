@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './List.css';
 
 const List = ({
   id,
@@ -17,7 +18,7 @@ const List = ({
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <section>
+    <section className={styles.List}>
       <h3>
         <Link to={`campaigns/${id}`}>{campaign_name}</Link>
       </h3>

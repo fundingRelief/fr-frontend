@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List component renders List 1`] = `
-<section>
+<section
+  className="List"
+>
   <h3>
     <Link
       to="campaigns/1"

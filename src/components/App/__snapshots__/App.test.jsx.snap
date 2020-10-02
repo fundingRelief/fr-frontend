@@ -7,12 +7,17 @@ exports[`App component renders App 1`] = `
     <Route
       component={[Function]}
       exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
       path="/campaigns/:id?"
     />
     <Route
       component={[Function]}
       exact={true}
-      path="/"
+      path="/about"
     />
   </Switch>
 </BrowserRouter>

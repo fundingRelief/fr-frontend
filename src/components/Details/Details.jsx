@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './Details.css';
 
 const Details = ({
   campaign_name,
@@ -17,7 +18,7 @@ const Details = ({
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <>
+    <section className={styles.Details}>
       <h3>{campaign_name}</h3>
       <h4>
         ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
@@ -37,7 +38,7 @@ const Details = ({
       <h3>
         <Link to={'/'}>back</Link>
       </h3>
-    </>
+    </section>
   );
 };
 
