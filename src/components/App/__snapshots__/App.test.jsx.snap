@@ -12,6 +12,36 @@ exports[`App component renders App 1`] = `
     <Route
       component={[Function]}
       exact={true}
+      path="/campaigns"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/campaigns/oregon-fires"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/campaigns/no-cal-fires"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/campaigns/so-cal-fires"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/campaigns/central-cal-fires"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/campaigns/washington-fires"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
       path="/campaigns/:id?"
     />
     <Route
