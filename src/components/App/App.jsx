@@ -16,6 +16,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={CampaignList} />
+        <Route exact path="/campaigns" component={CampaignList} />
         <Route
           exact
           path="/campaigns/oregon-fires"
