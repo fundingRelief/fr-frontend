@@ -46,3 +46,37 @@ header {
     margin-left: 0.5rem;
   }
 }
+
+.container{
+  background-color: teal;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
+#segment{
+  background-color: teal;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
+.ui three item menu{
+  color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
+#container {
+  padding: 1.2em;
+  background-color: teal;
+  font-family: 'Comfortaa', cursive;
+}
+
+#link {
+  color: black;
+  font-family: 'Comfortaa', cursive;
+}
+
+#logo {
+  color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
