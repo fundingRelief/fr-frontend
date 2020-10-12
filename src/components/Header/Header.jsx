@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.css';
-import { Input, Menu, Segment, Icon, Dropdown, Container} from 'semantic-ui-react';
+import { Input, Menu, Segment, Icon, Dropdown, Container } from 'semantic-ui-react';
 
 const Header = () => {
 
