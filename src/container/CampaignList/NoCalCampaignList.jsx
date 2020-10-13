@@ -18,7 +18,9 @@ const NoCalCampaignList = () => {
 
   return (
     <>
-      <Card.Group itemsPerRow={4}>
+      <Card.Group 
+        itemsPerRow={4}
+        stackable="true">
           {campaignNodes}
       </Card.Group>
     </>

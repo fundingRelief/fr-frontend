@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import List from '../../components/List/List';
+import { Card } from 'semantic-ui-react';
 import { fetchListCentralCal } from '../../services/fundingReliefAPI';
 
 const CentralCalCampaignList = () => {
@@ -17,7 +18,9 @@ const CentralCalCampaignList = () => {
 
   return (
     <>
-      <Card.Group itemsPerRow={4}>
+      <Card.Group 
+        itemsPerRow={4}
+        stackable="true">
           {campaignNodes}
       </Card.Group>
     </>
