@@ -33,7 +33,7 @@ const List = ({
           href={link_url}>        
           {campaign_name}
         </Card.Header>
-        <Card.Description>
+        <Card.Description className={styles.description}>
           {description}
         </Card.Description>
         <Card.Meta>
