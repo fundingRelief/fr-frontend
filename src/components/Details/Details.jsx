@@ -20,7 +20,7 @@ const Details = ({
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <Card fluid color='teal'>
+    <Card color='teal'>
       <Card.Content>
         <Image 
           bordered rounded size='large'
@@ -46,7 +46,7 @@ const Details = ({
         <Card.Content extra>
         <a>
           <Icon name='user' href={link_url} />
-            GoFundMe link
+            Donate Now GoFundMe
         </a>
       </Card.Content>
     </Card>

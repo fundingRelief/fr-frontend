@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  Menu,
+  Rail,
+  Ref,
+  Segment,
+  Sticky,
+} from 'semantic-ui-react'
 import Header from '../Header/Header';
 import CampaignList from '../../container/CampaignList/CampaignList';
 import CampaignDetail from '../../container/CampaignDetail/CampaignDetail';
@@ -10,10 +17,13 @@ import CentralCalCampaignList from '../../container/CampaignList/CentralCalCampa
 import WashingtonCampaignList from '../../container/CampaignList/WashingtonCampaignList';
 import About from '../About/About';
 
+
 export default function App() {
+  const  contextRef = () => createRef()
   return (
+    <div>
+      <Header/>    
     <Router>
-      <Header />
       <Switch>
         <Route exact path="/" component={CampaignList} />
         <Route exact path="/campaigns" component={CampaignList} />
@@ -46,5 +56,6 @@ export default function App() {
         <Route exact path="/about" component={About} />
       </Switch>
     </Router>
+    </div>
   );
 }

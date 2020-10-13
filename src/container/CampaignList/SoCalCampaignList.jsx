@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import List from '../../components/List/List';
+import { Card, Segment, Container } from 'semantic-ui-react';
 import { fetchListSoCal } from '../../services/fundingReliefAPI';
 
 const SoCalCampaignList = () => {
@@ -15,7 +16,19 @@ const SoCalCampaignList = () => {
     return <List key={campaign.id} {...campaign} />;
   });
 
-  return <>{campaignNodes}</>;
+  return (
+    <>
+    <Container style={{ padding: '5em' }}>
+      <Segment>
+        <Card.Group 
+          itemsPerRow={3}
+          stackable="true">
+            {campaignNodes}
+        </Card.Group>
+      </Segment>
+    </Container>
+    </>
+    );
 };
 
 export default SoCalCampaignList;
