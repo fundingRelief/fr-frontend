@@ -3,7 +3,6 @@
 exports[`Details component renders Details 1`] = `
 <Card
   color="teal"
-  fluid={true}
 >
   <CardContent>
     <Image
@@ -63,7 +62,7 @@ exports[`Details component renders Details 1`] = `
         href="https://gf.me/u/y2z2h8"
         name="user"
       />
-      GoFundMe link
+      Donate Now GoFundMe
     </a>
   </CardContent>
 </Card>
