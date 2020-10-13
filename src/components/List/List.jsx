@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './List.css';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Icon, Image, Progress } from 'semantic-ui-react';
 
 const List = ({
   id,
@@ -29,25 +29,33 @@ const List = ({
           src={img_url} alt='Fund being described.'
           />
         <Card.Header 
-          textAlign={"center"}
+          className={styles.header}
+          textAlign={"left"}
           href={link_url}>        
           {campaign_name}
         </Card.Header>
+        <Card.Description className={styles.location}>
+          {location}
+        </Card.Description>
         <Card.Description className={styles.description}>
           {description}
         </Card.Description>
-        <Card.Meta>
-          {location}
-        </Card.Meta>
-        <Card.Meta>{last_donation}</Card.Meta>
-        <Card.Meta>
-          ${numberWithCommas(current_amount)} raised out of ${numberWithCommas(goal)}{' '}goal
+        <Card.Meta className={styles.donation}>
+          {last_donation}
         </Card.Meta>
         <Card.Meta>
-          ${percentage_raised}% fulfilled
+          <Progress 
+            percent={percentage_raised} 
+            progress
+            className={styles.progressBar}/>
+        </Card.Meta>
+        <Card.Meta className={styles.raised}>
+          <strong>${numberWithCommas(current_amount)} raised of </strong> ${numberWithCommas(goal)}{' '}goal
         </Card.Meta>
       </Card.Content>
-        <Card.Content extra>
+        <Card.Content 
+          extra
+          textAlign="center">
           <a>
             <Icon name='user' href={link_url} />
               Donate Now at GoFundMe

@@ -21,9 +21,40 @@
   }
 }
 
+.header {
+  font-family: 'Comfortaa', cursive !important;
+  padding-top: 1em;
+}
+
+.location {
+  color: teal !important;
+  font-family: 'Comfortaa', cursive !important;
+  font-weight: bold;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
 .description {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;  
   overflow: hidden;
+  font-family: 'Comfortaa', cursive;
 }
+
+.donation {
+  padding-top: 1.5em;
+  padding-bottom: .5em !important;
+}
+
+.progressBar{
+  margin-bottom: 0 !important;
+}
+
+.raised {
+  color:black !important;
+  padding-top: .5em !important;
+}
+
+
+
