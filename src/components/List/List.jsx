@@ -47,7 +47,8 @@ const List = ({
           <Progress 
             percent={percentage_raised} 
             progress
-            className={styles.progressBar}/>
+            className={styles.progressBar}
+            color='teal'/>
         </Card.Meta>
         <Card.Meta className={styles.raised}>
           <strong>${numberWithCommas(current_amount)} raised of </strong> ${numberWithCommas(goal)}{' '}goal
