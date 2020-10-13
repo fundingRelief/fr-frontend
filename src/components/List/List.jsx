@@ -22,11 +22,14 @@ const List = ({
   };
 
   return (
-    <Card color='teal'>
+    <Card 
+      color='teal'
+      raised={true}>
       <Card.Content>
         <Image 
           bordered rounded size='large'
           src={img_url} alt='Fund being described.'
+          href={link_url}
           />
         <Card.Header 
           className={styles.header}
@@ -63,25 +66,6 @@ const List = ({
           </a>
       </Card.Content>
     </Card>
-    // <section className={styles.List}>
-    //   <h3>
-    //     <Link to={`campaigns/${id}`}>{campaign_name}</Link>
-    //   </h3>
-    //   <h4>
-    //     ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
-    //     goal
-    //   </h4>
-    //   <h4>{percentage_raised}% fulfilled</h4>
-    //   <h5>{last_donation}</h5>
-    //   <img src={img_url} />
-    //   <h4>
-    //     <a href={link_url} target="_blank" rel="noopener noreferrer">
-    //       GoFundMe link
-    //     </a>
-    //   </h4>
-    //   <h4>{location}</h4>
-    //   <p>{description}</p>
-    // </section>
   );
 };
 
