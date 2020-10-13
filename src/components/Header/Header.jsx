@@ -12,7 +12,10 @@ const Header = () => {
       //   >
       <div>
         <Menu secondary inverted fluid fixed='top'>
-          <Container className={styles.container} fluid style={{ minHeight: '3em', padding: '0.5em 1em' }}>
+          <Container 
+            className={styles.container} 
+            fluid 
+            style={{ minHeight: '3em', padding: '0.5em 1em' }}>
           <Dropdown 
             text='Campaigns' 
             pointing

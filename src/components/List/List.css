@@ -56,5 +56,13 @@
   padding-top: .5em !important;
 }
 
-
+.cardImg {
+  background-position: center;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  border-radius: 4px !important;
+  display: block !important;
+  padding-top: 66.625% !important;
+  width: 100% !important;
+}
 
