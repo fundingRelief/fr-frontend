@@ -9,6 +9,7 @@ import SoCalCampaignList from '../../container/CampaignList/SoCalCampaignList';
 import CentralCalCampaignList from '../../container/CampaignList/CentralCalCampaignList';
 import WashingtonCampaignList from '../../container/CampaignList/WashingtonCampaignList';
 import About from '../About/About';
+import Footer from '../Footer/Footer';
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
         <Route exact path="/campaigns/:id?" component={CampaignDetail} />
         <Route exact path="/about" component={About} />
       </Switch>
+      <Footer/>
     </Router>
   );
 }
