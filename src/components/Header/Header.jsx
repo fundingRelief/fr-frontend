@@ -5,14 +5,14 @@ import { Input, Menu, Segment, Icon, Dropdown, Container} from 'semantic-ui-reac
 const Header = () => {
 
   return (
-      <Segment
-        // textAlign='center'
-        style={{ minHeight: '.1em', padding: '0.5em 0em' }}
-        vertical
-        id={styles.segment}
-        >
-        <Menu secondary inverted fluid>
-          <Container className={styles.container}>
+      // <Segment
+      //   style={{ minHeight: '.1em', padding: '0.5em 0em' }}
+      //   vertical
+      //   id={styles.segment}
+      //   >
+      <div>
+        <Menu secondary inverted fluid fixed='top'>
+          <Container className={styles.container} fluid style={{ minHeight: '.1em', padding: '0.5em 1em' }}>
           <Dropdown 
             text='Campaigns' 
             pointing
@@ -54,7 +54,8 @@ const Header = () => {
               />
           </Container>
         </Menu>
-     </Segment>
+     {/* </Segment> */}
+     </div>
   );
 }
 

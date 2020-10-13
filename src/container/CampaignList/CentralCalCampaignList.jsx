@@ -18,11 +18,11 @@ const CentralCalCampaignList = () => {
 
   return (
     <>
-    <Container>
+    <Container style={{ padding: '5em' }}>
       <Segment>
         <Card.Group 
           itemsPerRow={3}
-          stackable="true">
+          stackable={true}>
             {campaignNodes}
         </Card.Group>
       </Segment>

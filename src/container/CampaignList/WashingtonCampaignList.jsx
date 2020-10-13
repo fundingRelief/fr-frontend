@@ -18,7 +18,7 @@ const WashingtonCampaignList = () => {
 
   return (
     <>
-    <Container>
+    <Container style={{ padding: '5em' }}>
       <Segment>
         <Card.Group 
           itemsPerRow={3}
