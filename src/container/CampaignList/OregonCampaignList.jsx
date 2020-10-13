@@ -27,7 +27,6 @@ const OregonCampaignList = () => {
         </Card.Group>
       </Segment>
     </Container>
-
     </>
     );
 };

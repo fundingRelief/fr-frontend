@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import List from '../../components/List/List';
-import { Card } from 'semantic-ui-react';
+import { Card, Segment, Container } from 'semantic-ui-react';
 import { fetchListNoCal } from '../../services/fundingReliefAPI';
 
 const NoCalCampaignList = () => {
@@ -18,11 +18,15 @@ const NoCalCampaignList = () => {
 
   return (
     <>
-      <Card.Group 
-        itemsPerRow={4}
-        stackable="true">
-          {campaignNodes}
-      </Card.Group>
+    <Container>
+      <Segment>
+        <Card.Group 
+          itemsPerRow={3}
+          stackable="true">
+            {campaignNodes}
+        </Card.Group>
+      </Segment>
+    </Container>
     </>
     );
 };

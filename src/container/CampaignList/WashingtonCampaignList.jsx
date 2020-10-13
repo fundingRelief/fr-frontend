@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import List from '../../components/List/List';
-import { Card, Container } from 'semantic-ui-react';
+import { Card, Segment, Container } from 'semantic-ui-react';
 import { fetchListWashington } from '../../services/fundingReliefAPI';
 
 const WashingtonCampaignList = () => {
@@ -18,13 +18,15 @@ const WashingtonCampaignList = () => {
 
   return (
     <>
-      <Container>
+    <Container>
+      <Segment>
         <Card.Group 
-          itemsPerRow={4}
+          itemsPerRow={3}
           stackable="true">
             {campaignNodes}
         </Card.Group>
-      </Container>
+      </Segment>
+    </Container>
     </>
     );
 };
