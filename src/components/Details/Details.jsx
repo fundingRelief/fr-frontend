@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import styles from './Details.css';
+import { Card, Icon, Image } from 'semantic-ui-react';
+// import { Link } from 'react-router-dom';
+// import styles from './Details.css';
 
 const Details = ({
   campaign_name,
@@ -19,32 +20,62 @@ const Details = ({
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <section className={styles.Details}>
-      <h3>{campaign_name}</h3>
-      <h4>
-        ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
-        goal
-      </h4>
-      <h4>{percentage_raised}% fulfilled</h4>
-      <img src={img_url} />
-      <h4>
-        <a href={link_url} target="_blank" rel="noopener noreferrer">
-          GoFundMe link
+    <Card fluid color='teal'>
+      <Card.Content>
+        <Image 
+          bordered rounded size='large'
+          src={img_url} alt='Fund being described.'
+          />
+        <Card.Header textAlign={"center"}>{campaign_name}</Card.Header>
+        <Card.Description>{description}</Card.Description>
+        <Card.Meta>{location}</Card.Meta>
+        <Card.Meta>{last_donation}</Card.Meta>
+        <Card.Meta> cause:{' '}
+          <a 
+            href={cause} target="_blank" rel="noopener noreferrer">
+            {cause}
+          </a>
+       </Card.Meta>
+        <Card.Meta>${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
+            goal
+        </Card.Meta>
+        <Card.Meta>
+          ${percentage_raised}% fulfilled
+        </Card.Meta>
+      </Card.Content>
+        <Card.Content extra>
+        <a>
+          <Icon name='user' href={link_url} />
+            GoFundMe link
         </a>
-      </h4>
-      <h4>{location}</h4>
-      <p>{description}</p>
-      <h4>{last_donation}</h4>
-      <h4>
-        cause:{' '}
-        <a href={cause} target="_blank" rel="noopener noreferrer">
-          {cause}
-        </a>
-      </h4>
-      <h3>
-        <Link to={'/'}>back</Link>
-      </h3>
-    </section>
+      </Card.Content>
+    </Card>
+    // <section className={styles.Details}>
+    //   <h3>{campaign_name}</h3>
+    //   <h4>
+    //     ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
+    //     goal
+    //   </h4>
+    //   <h4>{percentage_raised}% fulfilled</h4>
+    //   <img src={img_url} />
+    //   <h4>
+    //     <a href={link_url} target="_blank" rel="noopener noreferrer">
+    //       GoFundMe link
+    //     </a>
+    //   </h4>
+    //   <h4>{location}</h4>
+    //   <p>{description}</p>
+    //   <h4>{last_donation}</h4>
+    //   <h4>
+    //     cause:{' '}
+    //     <a href={cause} target="_blank" rel="noopener noreferrer">
+    //       {cause}
+    //     </a>
+    //   </h4>
+    //   <h3>
+    //     <Link to={'/'}>back</Link>
+    //   </h3>
+    // </section>
   );
 };
 
