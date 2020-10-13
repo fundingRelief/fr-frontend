@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Details from './Details';
+import { Card, Image, Icon } from 'semantic-ui-react'
 
 describe('Details component', () => {
   it('renders Details', () => {
