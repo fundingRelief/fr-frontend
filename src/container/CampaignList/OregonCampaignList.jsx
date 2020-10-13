@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import List from '../../components/List/List';
+import { Card } from 'semantic-ui-react';
 import { fetchListOregon } from '../../services/fundingReliefAPI';
 
 const OregonCampaignList = () => {
@@ -15,7 +16,13 @@ const OregonCampaignList = () => {
     return <List key={campaign.id} {...campaign} />;
   });
 
-  return <>{campaignNodes}</>;
+  return (
+    <>
+      <Card.Group itemsPerRow={4}>
+          {campaignNodes}
+      </Card.Group>
+    </>
+    );
 };
 
 export default OregonCampaignList;

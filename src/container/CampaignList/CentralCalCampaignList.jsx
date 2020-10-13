@@ -15,7 +15,13 @@ const CentralCalCampaignList = () => {
     return <List key={campaign.id} {...campaign} />;
   });
 
-  return <>{campaignNodes}</>;
+  return (
+    <>
+      <Card.Group itemsPerRow={4}>
+          {campaignNodes}
+      </Card.Group>
+    </>
+    );
 };
 
 export default CentralCalCampaignList;
