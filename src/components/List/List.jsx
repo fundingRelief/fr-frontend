@@ -28,7 +28,6 @@ const List = ({
       <Card.Content>
         <Image 
           bordered rounded size='large'
-          // src={img_url} alt='Fund being described.'
           href={link_url}
           style={{ backgroundImage: `url(${img_url})`}}
           className={styles.cardImg}
