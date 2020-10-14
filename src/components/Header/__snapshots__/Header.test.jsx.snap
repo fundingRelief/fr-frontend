@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders Header 1`] = `
+<div>
+  <Menu
+    fixed="top"
+    fluid={true}
+    inverted={true}
+    secondary={true}
+  >
+    <Container
+      className="container"
+      fluid={true}
+      style={
+        Object {
+          "minHeight": "3em",
+          "padding": "0.5em 1em",
+        }
+      }
+    >
+      <Dropdown
+        additionLabel="Add "
+        additionPosition="top"
+        className="link item"
+        closeOnBlur={true}
+        closeOnEscape={true}
+        deburr={false}
+        floating={true}
+        icon="dropdown"
+        minCharacters={1}
+        noResultsMessage="No results found."
+        openOnFocus={true}
+        pointing={true}
+        renderLabel={[Function]}
+        searchInput="text"
+        selectOnBlur={true}
+        selectOnNavigation={true}
+        text="Campaigns"
+        wrapSelection={true}
+      >
+        <DropdownMenu>
+          <DropdownHeader>
+            Disasters
+          </DropdownHeader>
+          <DropdownItem>
+            <Dropdown
+              additionLabel="Add "
+              additionPosition="top"
+              closeOnBlur={true}
+              closeOnEscape={true}
+              deburr={false}
+              icon="dropdown"
+              minCharacters={1}
+              noResultsMessage="No results found."
+              openOnFocus={true}
+              renderLabel={[Function]}
+              searchInput="text"
+              selectOnBlur={true}
+              selectOnNavigation={true}
+              text="Wildfire"
+              wrapSelection={true}
+            >
+              <DropdownMenu>
+                <DropdownHeader>
+                  California
+                </DropdownHeader>
+                <DropdownItem
+                  href="/campaigns/no-cal-fires"
+                >
+                  Nor-Cal Fires
+                </DropdownItem>
+                <DropdownItem
+                  href="/campaigns/central-cal-fires"
+                >
+                  Central-Cal Fires
+                </DropdownItem>
+                <DropdownItem
+                  href="/campaigns/so-cal-fires"
+                >
+                  So-Cal Fires
+                </DropdownItem>
+                <DropdownDivider />
+                <DropdownHeader>
+                  Oregon
+                </DropdownHeader>
+                <DropdownItem
+                  href="/campaigns/oregon-fires"
+                >
+                  Oregon Fires (All)
+                </DropdownItem>
+                <DropdownDivider />
+                <DropdownHeader>
+                  Washington
+                </DropdownHeader>
+                <DropdownItem
+                  href="/campaigns/washington-fires"
+                >
+                  Washington Fires (All)
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+      <MenuItem
+        href="/"
+        name="Funding Relief"
+        position="right"
+      />
+    </Container>
+  </Menu>
+</div>
+`;

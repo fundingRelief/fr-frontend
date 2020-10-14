@@ -11,6 +11,7 @@ exports[`List component renders List 1`] = `
       bordered={true}
       className="cardImg"
       href="https://gf.me/u/y2z2h8"
+      rel="noopener noreferrer"
       rounded={true}
       size="large"
       style={
@@ -18,11 +19,14 @@ exports[`List component renders List 1`] = `
           "backgroundImage": "url(https://d2g8igdw686xgo.cloudfront.net/51544330_1601348243982129_r.jpeg)",
         }
       }
+      target="_blank"
       ui={true}
     />
     <CardHeader
       className="header"
       href="https://gf.me/u/y2z2h8"
+      rel="noopener noreferrer"
+      target="_blank"
       textAlign="left"
     >
       Our parents lost their home to the Almeda fire
@@ -68,10 +72,13 @@ exports[`List component renders List 1`] = `
     extra={true}
     textAlign="center"
   >
-    <a>
+    <a
+      href="https://gf.me/u/y2z2h8"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       <Icon
         as="i"
-        href="https://gf.me/u/y2z2h8"
         name="user"
       />
       Donate Now at GoFundMe
