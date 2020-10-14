@@ -21,41 +21,41 @@ import About from '../About/About';
 export default function App() {
   const  contextRef = () => createRef()
   return (
-    <div>
+    <>
       <Header/>    
-    <Router>
-      <Switch>
-        <Route exact path="/" component={CampaignList} />
-        <Route exact path="/campaigns" component={CampaignList} />
-        <Route
-          exact
-          path="/campaigns/oregon-fires"
-          component={OregonCampaignList}
-        />
-        <Route
-          exact
-          path="/campaigns/no-cal-fires"
-          component={NoCalCampaignList}
-        />
-        <Route
-          exact
-          path="/campaigns/so-cal-fires"
-          component={SoCalCampaignList}
-        />
-        <Route
-          exact
-          path="/campaigns/central-cal-fires"
-          component={CentralCalCampaignList}
-        />
-        <Route
-          exact
-          path="/campaigns/washington-fires"
-          component={WashingtonCampaignList}
-        />
-        <Route exact path="/campaigns/:id?" component={CampaignDetail} />
-        <Route exact path="/about" component={About} />
-      </Switch>
-    </Router>
-    </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={CampaignList} />
+          <Route exact path="/campaigns" component={CampaignList} />
+          <Route
+            exact
+            path="/campaigns/oregon-fires"
+            component={OregonCampaignList}
+          />
+          <Route
+            exact
+            path="/campaigns/no-cal-fires"
+            component={NoCalCampaignList}
+          />
+          <Route
+            exact
+            path="/campaigns/so-cal-fires"
+            component={SoCalCampaignList}
+          />
+          <Route
+            exact
+            path="/campaigns/central-cal-fires"
+            component={CentralCalCampaignList}
+          />
+          <Route
+            exact
+            path="/campaigns/washington-fires"
+            component={WashingtonCampaignList}
+          />
+          <Route exact path="/campaigns/:id?" component={CampaignDetail} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </Router>
+    </>
   );
 }
