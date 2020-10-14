@@ -18,17 +18,17 @@ const SoCalCampaignList = () => {
 
   return (
     <>
-    <Container style={{ padding: '5em' }}>
-      <Segment>
-        <Card.Group 
-          itemsPerRow={3}
-          stackable="true">
+      <Container style={{ padding: '5em' }}>
+        <Segment>
+          <Card.Group 
+            itemsPerRow={3}
+            stackable="true">
             {campaignNodes}
-        </Card.Group>
-      </Segment>
-    </Container>
+          </Card.Group>
+        </Segment>
+      </Container>
     </>
-    );
+  );
 };
 
 export default SoCalCampaignList;
