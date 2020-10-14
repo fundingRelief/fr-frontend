@@ -20,13 +20,13 @@ const Details = ({
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <Card color='teal'>
+    <Card color="teal">
       <Card.Content>
         <Image 
-          bordered rounded size='large'
-          src={img_url} alt='Fund being described.'
-          />
-        <Card.Header textAlign={"center"}>{campaign_name}</Card.Header>
+          bordered rounded size="large"
+          src={img_url} alt="Fund being described."
+        />
+        <Card.Header textAlign={'center'}>{campaign_name}</Card.Header>
         <Card.Description>{description}</Card.Description>
         <Card.Meta>{location}</Card.Meta>
         <Card.Meta>{last_donation}</Card.Meta>
@@ -35,7 +35,7 @@ const Details = ({
             href={cause} target="_blank" rel="noopener noreferrer">
             {cause}
           </a>
-       </Card.Meta>
+        </Card.Meta>
         <Card.Meta>${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
             goal
         </Card.Meta>
@@ -43,9 +43,9 @@ const Details = ({
           ${percentage_raised}% fulfilled
         </Card.Meta>
       </Card.Content>
-        <Card.Content extra>
+      <Card.Content extra>
         <a>
-          <Icon name='user' href={link_url} />
+          <Icon name="user" href={link_url} />
             Donate Now GoFundMe
         </a>
       </Card.Content>

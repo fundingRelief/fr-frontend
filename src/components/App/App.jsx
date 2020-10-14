@@ -10,7 +10,6 @@ import CentralCalCampaignList from '../../container/CampaignList/CentralCalCampa
 import WashingtonCampaignList from '../../container/CampaignList/WashingtonCampaignList';
 import About from '../About/About';
 
-
 export default function App() {
   return (
     <div>
