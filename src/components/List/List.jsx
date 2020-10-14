@@ -5,7 +5,7 @@ import styles from './List.css';
 import { Card, Icon, Image, Progress } from 'semantic-ui-react';
 
 const List = ({
-  id,
+  // id,
   campaign_name,
   current_amount,
   goal,
