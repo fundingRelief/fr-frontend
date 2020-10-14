@@ -1,4 +1,4 @@
-.List {
+/* .List {
   font-family: 'Comfortaa', cursive;
   a {
     text-decoration: none;
@@ -19,7 +19,7 @@
   a:active {
     color: rgba(40, 167, 118, 0.6);
   }
-}
+} */
 
 .header {
   font-family: 'Comfortaa', cursive !important;
