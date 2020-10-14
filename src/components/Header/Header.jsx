@@ -16,8 +16,6 @@ const Header = () => {
             pointing
             className="link item" 
             floating
-            // simple 
-            // item
           >
             <Dropdown.Menu>
               <Dropdown.Header>Disasters</Dropdown.Header>

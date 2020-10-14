@@ -57,6 +57,7 @@ exports[`Header component renders Header 1`] = `
               searchInput="text"
               selectOnBlur={true}
               selectOnNavigation={true}
+              simple={true}
               text="Wildfire"
               wrapSelection={true}
             >
