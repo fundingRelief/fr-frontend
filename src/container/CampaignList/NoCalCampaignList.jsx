@@ -22,7 +22,7 @@ const NoCalCampaignList = () => {
         <Segment>
           <Card.Group 
             itemsPerRow={3}
-            stackable="true">
+            stackable={true}>
             {campaignNodes}
           </Card.Group>
         </Segment>

@@ -13,10 +13,13 @@ const Header = () => {
           style={{ minHeight: '3em', padding: '0.5em 1em' }}>
           <Dropdown 
             text="Campaigns" 
-            pointing
+            // pointing
             className="link item" 
-            floating>
-            <Dropdown.Menu >
+            floating
+            simple 
+            item
+          >
+            <Dropdown.Menu>
               <Dropdown.Header>Disasters</Dropdown.Header>
               <Dropdown.Item>
                 <Dropdown text="Wildfire">
