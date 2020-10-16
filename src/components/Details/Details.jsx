@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Icon, Image } from 'semantic-ui-react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import styles from './Details.css';
 
 const Details = ({
@@ -11,10 +11,10 @@ const Details = ({
   percentage_raised,
   location,
   img_url,
-  link_url,
+  // link_url,
   description,
   last_donation,
-  cause,
+  // cause,
 }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -30,12 +30,12 @@ const Details = ({
         <Card.Description>{description}</Card.Description>
         <Card.Meta>{location}</Card.Meta>
         <Card.Meta>{last_donation}</Card.Meta>
-        <Card.Meta> cause:{' '}
+        {/* <Card.Meta> cause:{' '}
           <a 
             href={cause} target="_blank" rel="noopener noreferrer">
             {cause}
           </a>
-        </Card.Meta>
+        </Card.Meta> */}
         <Card.Meta>${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
             goal
         </Card.Meta>
@@ -44,10 +44,11 @@ const Details = ({
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        <a>
+        {/* <a>
           <Icon name="user" href={link_url} />
             Donate Now GoFundMe
-        </a>
+        </a> */}
+        <Link to={'/'}>back</Link>
       </Card.Content>
     </Card>
     // <section className={styles.Details}>

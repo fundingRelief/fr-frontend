@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './List.css';
 import { Card, Icon, Image, Progress } from 'semantic-ui-react';
 
 const List = ({
-  // id,
+  id,
   campaign_name,
   current_amount,
   goal,
@@ -26,20 +26,27 @@ const List = ({
       color="teal"
       raised={true}>
       <Card.Content>
-        <Image 
-          bordered rounded size="large"
-          href={link_url}
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ backgroundImage: `url(${img_url})` }}
-          className={styles.cardImg}
-        />
-        <Card.Header 
-          className={styles.header}
-          textAlign={'left'}
-          href={link_url} target="_blank" rel="noopener noreferrer">        
-          {campaign_name}
-        </Card.Header>
+        <Link className={styles.link} to={`/campaigns/${id}`}>
+          <Image 
+            bordered rounded size="large"
+            // href={link_url}
+            // target="_blank" 
+            // rel="noopener noreferrer"
+            style={{ backgroundImage: `url(${img_url})` }}
+            className={styles.cardImg}
+          />
+        </Link>
+
+        <Link className={styles.link} to={`/campaigns/${id}`}>
+          <Card.Header 
+            className={styles.header}
+            textAlign={'left'}
+          // href={link_url} target="_blank" rel="noopener noreferrer"
+          >        
+            {campaign_name}
+          </Card.Header>
+        </Link>
+ 
         <Card.Description className={styles.location}>
           {location}
         </Card.Description>
