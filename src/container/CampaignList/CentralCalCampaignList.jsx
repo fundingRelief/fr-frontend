@@ -14,8 +14,7 @@ const CentralCalCampaignList = () => {
   return (
     <>
       <Container style={{ padding: '5em' }}>
-        <Segment>
-          
+        <Segment>  
           {loading && <>
             <Segment>
               <Dimmer active inverted>
@@ -23,7 +22,6 @@ const CentralCalCampaignList = () => {
               </Dimmer>
               <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
             </Segment><br /></>}
-            
           <Card.Group 
             itemsPerRow={3}
             stackable={true}>
