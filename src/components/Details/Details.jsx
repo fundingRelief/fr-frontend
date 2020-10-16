@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Icon, Image, Container, Header } from 'semantic-ui-react';
+import { Icon, Image, Container, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import styles from './Details.css';
 
@@ -28,15 +28,14 @@ const Details = ({
           src={img_url} alt="Fund being described."
         />
         <Header textAlign={'center'}>{campaign_name}</Header>
-        <Card.Description>{description}</Card.Description>
-        <Card.Meta>{location}</Card.Meta>
-        <Card.Meta>{last_donation}</Card.Meta>
-        <Card.Meta>${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
-            goal
-        </Card.Meta>
-        <Card.Meta>
-          {percentage_raised}% fulfilled
-        </Card.Meta>
+        <p className={styles.Whatever}>
+          {description}
+        </p>
+        {location}
+        {last_donation}
+        ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '} goal
+        {percentage_raised}% fulfilled
+        
         <Icon name="user" href={link_url} target="_blank" rel="noopener noreferrer">
             Donate Now GoFundMe
         </Icon>
