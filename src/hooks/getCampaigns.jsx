@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 export const useGetChallenges = fetchFunction => {
@@ -14,10 +13,6 @@ export const useGetChallenges = fetchFunction => {
         setLoading(false);
       });
   }, []);
-
-  // useEffect(() => {
-  //   setSelectedChallenges(category === 'allCategories' ? challenges : challenges.filter(challenge => challenge.category === category));
-  // }, [category]);
 
   return { campaigns, setCampaigns, loading, setLoading };
 };
