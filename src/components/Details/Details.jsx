@@ -14,7 +14,6 @@ const Details = ({
   link_url,
   description,
   last_donation,
-  // cause,
 }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -32,12 +31,6 @@ const Details = ({
         <Card.Description>{description}</Card.Description>
         <Card.Meta>{location}</Card.Meta>
         <Card.Meta>{last_donation}</Card.Meta>
-        {/* <Card.Meta> cause:{' '}
-          <a 
-            href={cause} target="_blank" rel="noopener noreferrer">
-            {cause}
-          </a>
-        </Card.Meta> */}
         <Card.Meta>${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
             goal
         </Card.Meta>
@@ -52,32 +45,6 @@ const Details = ({
 
       </Container>
     </>
-    // <section className={styles.Details}>
-    //   <h3>{campaign_name}</h3>
-    //   <h4>
-    //     ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
-    //     goal
-    //   </h4>
-    //   <h4>{percentage_raised}% fulfilled</h4>
-    //   <img src={img_url} />
-    //   <h4>
-    //     <a href={link_url} target="_blank" rel="noopener noreferrer">
-    //       GoFundMe link
-    //     </a>
-    //   </h4>
-    //   <h4>{location}</h4>
-    //   <p>{description}</p>
-    //   <h4>{last_donation}</h4>
-    //   <h4>
-    //     cause:{' '}
-    //     <a href={cause} target="_blank" rel="noopener noreferrer">
-    //       {cause}
-    //     </a>
-    //   </h4>
-    //   <h3>
-    //     <Link to={'/'}>back</Link>
-    //   </h3>
-    // </section>
   );
 };
 
