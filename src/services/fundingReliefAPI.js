@@ -1,10 +1,17 @@
 /* eslint-disable no-undef */
 
-export const fetchList = () => {
-  return fetch(`${process.env.API_URL}/campaigns/percentage`)
+
+export const fetchFunction = () => {
+  return fetch(`${process.env.API_URL}/campaigns`)
     .then((res) => res.json())
     .then((json) => json);
 };
+
+// export const fetchList = () => {
+//   return fetch(`${process.env.API_URL}/campaigns/percentage`)
+//     .then((res) => res.json())
+//     .then((json) => json);
+// };
 
 export const fetchListOregon = () => {
   return fetch(`${process.env.API_URL}/campaigns/oregon`)
