@@ -29,9 +29,6 @@ const List = ({
         <Link className={styles.link} to={`/campaigns/${id}`}>
           <Image 
             bordered rounded size="large"
-            // href={link_url}
-            // target="_blank" 
-            // rel="noopener noreferrer"
             style={{ backgroundImage: `url(${img_url})` }}
             className={styles.cardImg}
           />
@@ -41,7 +38,6 @@ const List = ({
           <Card.Header 
             className={styles.header}
             textAlign={'left'}
-          // href={link_url} target="_blank" rel="noopener noreferrer"
           >        
             {campaign_name}
           </Card.Header>
