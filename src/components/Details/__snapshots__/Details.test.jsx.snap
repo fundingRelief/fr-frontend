@@ -21,27 +21,21 @@ exports[`Details component renders Details 1`] = `
     >
       Our parents lost their home to the Almeda fire
     </Header>
-    <CardDescription>
+    <p
+      className="Whatever"
+    >
       On September 8th our parents and many other families lost their home in Phoenix, Oregon. Our parents lost their place to relax and escape to after work. We as a family lost the place we knew we could walk right in without knocking and raid the fridge. The place where my boys would go to and run around in the backyard and play with Paco our family dog. The place where my brother would come back home to every summer after teaching in Oklahoma as teacher for Teach for America. The place where my sister would come home to when she would get homesick or just need a break from being a student at Portland State University. We decided to start this GoFundMe for our parents who have sacrificed for us their entire lives, they always put our needs ahead of theirs even to this day even after losing their home. We hope that we can do our part for them now. Thank you.
-    </CardDescription>
-    <CardMeta>
-      PORTLAND, OR
-    </CardMeta>
-    <CardMeta>
-      Last donation 2h ago
-    </CardMeta>
-    <CardMeta>
-      $
-      944
-       out of $
-      5,000
-       
-      goal
-    </CardMeta>
-    <CardMeta>
-      18
-      % fulfilled
-    </CardMeta>
+    </p>
+    PORTLAND, OR
+    Last donation 2h ago
+    $
+    944
+     out of $
+    5,000
+     
+     goal
+    18
+    % fulfilled
     <Icon
       as="i"
       href="https://gf.me/u/y2z2h8"
