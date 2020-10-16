@@ -2,10 +2,10 @@ import React from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import { fetchListCentralCal } from '../../services/fundingReliefAPI';
-import { useGetChallenges } from '../../hooks/getCampaigns';
+import { useGetCampaigns } from '../../hooks/getCampaigns';
 
 const CentralCalCampaignList = () => {
-  const { campaigns, loading } = useGetChallenges(fetchListCentralCal);
+  const { campaigns, loading } = useGetCampaigns(fetchListCentralCal);
 
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;

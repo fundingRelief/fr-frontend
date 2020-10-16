@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useGetChallenges = fetchFunction => {
+export const useGetCampaigns = fetchFunction => {
   const [campaigns, setCampaigns] = useState([]);
 
   const [loading, setLoading] = useState(false);
