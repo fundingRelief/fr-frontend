@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container } from 'semantic-ui-react';
 import { fetchListCentralCal } from '../../services/fundingReliefAPI';
