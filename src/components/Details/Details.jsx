@@ -42,7 +42,7 @@ const Details = ({
             goal
         </Card.Meta>
         <Card.Meta>
-          ${percentage_raised}% fulfilled
+          {percentage_raised}% fulfilled
         </Card.Meta>
         <Icon name="user" href={link_url} target="_blank" rel="noopener noreferrer">
             Donate Now GoFundMe
