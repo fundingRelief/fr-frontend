@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Segment, Container } from 'semantic-ui-react';
 import List from '../../components/List/List';
+import { useGetChallenges } from '../../hooks/getCampaigns';
+import { fetchCampaigns } from '../../services/fundingReliefAPI';
 // import { fetchList } from '../../services/fundingReliefAPI';
 
 const CampaignList = () => {
@@ -10,7 +12,7 @@ const CampaignList = () => {
   //   fetchList().then((fetchCampaignList) => setCampaigns(fetchCampaignList));
   // }, []);
 
-  const { campaigns, setCampaigns } = useGetCampaigns(fetchCampaigns);
+  const { campaigns } = useGetChallenges(fetchCampaigns);
 
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;

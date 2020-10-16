@@ -1,10 +1,10 @@
 const BODY_METHODS = ['POST', 'PATCH', 'PUT'];
 const request = (path, method, body = null) => {
   const headers = BODY_METHODS.includes(method) ? { 'Content-Type': 'application/json' } : {};
+  /* eslint-disable no-undef */
   return fetch(`${process.env.API_URL}${path}`, {
     method,
     headers,
-    credentials: 'include',
     body: BODY_METHODS.includes(method) ? JSON.stringify(body) : null
   })
     .then(res => Promise.all([res.ok, res.json()]))
