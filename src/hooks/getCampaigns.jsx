@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 export const useGetChallenges = fetchFunction => {
   const [campaigns, setCampaigns] = useState([]);
 
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // setLoading(true);
+    setLoading(true);
     fetchFunction()
       .then(fetchedCampaigns => {
         setCampaigns(fetchedCampaigns);
-        // setLoading(false);
+        setLoading(false);
       });
   }, []);
 
@@ -19,5 +19,5 @@ export const useGetChallenges = fetchFunction => {
   //   setSelectedChallenges(category === 'allCategories' ? challenges : challenges.filter(challenge => challenge.category === category));
   // }, [category]);
 
-  return { campaigns, setCampaigns };
+  return { campaigns, setCampaigns, loading, setLoading };
 };
