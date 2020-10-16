@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-// import styles from './Details.css';
+import styles from './Details.css';
 
 const Details = ({
   campaign_name,
@@ -20,13 +20,15 @@ const Details = ({
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <Card color="teal">
-      <Card.Content>
-        <Image 
+    <>
+      <Container className={styles.Details}>
+      
+        <Image
+          centered
           bordered rounded size="large"
           src={img_url} alt="Fund being described."
         />
-        <Card.Header textAlign={'center'}>{campaign_name}</Card.Header>
+        <Header textAlign={'center'}>{campaign_name}</Header>
         <Card.Description>{description}</Card.Description>
         <Card.Meta>{location}</Card.Meta>
         <Card.Meta>{last_donation}</Card.Meta>
@@ -42,17 +44,14 @@ const Details = ({
         <Card.Meta>
           ${percentage_raised}% fulfilled
         </Card.Meta>
-      </Card.Content>
-      <Card.Content extra>
-        {/* <a> */}
         <Icon name="user" href={link_url} target="_blank" rel="noopener noreferrer">
             Donate Now GoFundMe
         </Icon>
-        {/* </a> */}
         <br />
         <Link to={'/'}>back</Link>
-      </Card.Content>
-    </Card>
+
+      </Container>
+    </>
     // <section className={styles.Details}>
     //   <h3>{campaign_name}</h3>
     //   <h4>
