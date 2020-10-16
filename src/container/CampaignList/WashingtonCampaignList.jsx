@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container } from 'semantic-ui-react';
 import { fetchListWashington } from '../../services/fundingReliefAPI';
+import { useGetChallenges } from '../../hooks/getCampaigns';
 
 const WashingtonCampaignList = () => {
-  const [campaigns, setCampaigns] = useState([]);
-
-  useEffect(() => {
-    fetchListWashington().then((fetchWashingtonCampaignList) =>
-      setCampaigns(fetchWashingtonCampaignList)
-    );
-  }, []);
+  const { campaigns } = useGetChallenges(fetchListWashington);
 
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
