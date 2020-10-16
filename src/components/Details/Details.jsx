@@ -21,7 +21,7 @@ const Details = ({
   };
   return (
     <>
-      <Container className={styles.Details}>
+      <Container text className={styles.Details}>
       
         <Image
           centered
