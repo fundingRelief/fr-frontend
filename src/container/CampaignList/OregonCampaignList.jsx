@@ -1,6 +1,6 @@
 import React from 'react';
 import List from '../../components/List/List';
-import { Card, Container, Segment } from 'semantic-ui-react';
+import { Card, Container, Dimmer, Image, Loader, Segment } from 'semantic-ui-react';
 import { fetchListOregon } from '../../services/fundingReliefAPI';
 import { useGetChallenges } from '../../hooks/getCampaigns';
 
@@ -15,7 +15,13 @@ const OregonCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
-          {loading && <h3>loading...</h3>}
+          {loading && <>
+            <Segment>
+              <Dimmer active inverted>
+                <Loader inverted>Loading</Loader>
+              </Dimmer>
+              <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
+            </Segment><br /></>}
           <Card.Group 
             itemsPerRow={3}
             stackable={true}>
