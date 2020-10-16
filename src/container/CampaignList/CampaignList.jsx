@@ -6,7 +6,7 @@ import { fetchCampaigns } from '../../services/fundingReliefAPI';
 
 const CampaignList = () => {
   const { campaigns, loading } = useGetChallenges(fetchCampaigns);
-
+  
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });

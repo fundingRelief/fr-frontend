@@ -11,7 +11,7 @@ const Details = ({
   percentage_raised,
   location,
   img_url,
-  // link_url,
+  link_url,
   description,
   last_donation,
   // cause,
@@ -44,10 +44,12 @@ const Details = ({
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        {/* <a>
-          <Icon name="user" href={link_url} />
+        {/* <a> */}
+        <Icon name="user" href={link_url} target="_blank" rel="noopener noreferrer">
             Donate Now GoFundMe
-        </a> */}
+        </Icon>
+        {/* </a> */}
+        <br />
         <Link to={'/'}>back</Link>
       </Card.Content>
     </Card>
