@@ -5,7 +5,7 @@ import { fetchListWashington } from '../../services/fundingReliefAPI';
 import { useGetChallenges } from '../../hooks/getCampaigns';
 
 const WashingtonCampaignList = () => {
-  const { campaigns } = useGetChallenges(fetchListWashington);
+  const { campaigns, loading } = useGetChallenges(fetchListWashington);
 
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
@@ -15,6 +15,7 @@ const WashingtonCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
+          {loading && <h3>loading...</h3>}
           <Card.Group 
             itemsPerRow={3}
             stackable={true}>
