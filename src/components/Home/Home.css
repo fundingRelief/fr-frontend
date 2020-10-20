@@ -1,36 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 .container {
   background-color: black;
+  margin-top: 4em;
+  margin-right: 2em;
+  margin-left: 2em;
+  font-family: 'Comfortaa', cursive;
 }
-.p1 {
-min-height: 300px; 
+.header{
+  color: white;
+  text-align: center;
+}
+
+.div1{
+  padding-left: 2em;
+}
+
+.div2{
+  padding-right: 2em;
+}
+
+.p {
+min-height: 350px; 
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 0em 21em 0em 21em;
+padding: 5em 2em 1em 2em;
 background-color: black;
-color: white
-/* background-color: rgb(202, 196, 196) */
-}
-
-.p2 {
-  min-height: 300px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0em 21em 0em 21em;
-  background-color: black;
-  color: white
-  /* background-color:teal */
-  }
-
-.p3 {
-  min-height: 300px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0em 21em 0em 21em;
-  background-color: black;
-  color: white
-  /* background-color: rgb(202, 196, 196) */
+color: white;
+font-size: 0.9vw;
+border: 2px solid teal;
 }
