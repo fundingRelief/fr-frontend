@@ -3,6 +3,7 @@ import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-rea
 import List from '../../components/List/List';
 import { useGetCampaigns } from '../../hooks/getCampaigns';
 import { fetchCampaigns } from '../../services/fundingReliefAPI';
+import Home from '../../components/Home/Home'
 
 const CampaignList = () => {
   const { campaigns, loading } = useGetCampaigns(fetchCampaigns);
@@ -14,6 +15,7 @@ const CampaignList = () => {
   return (
     <>
       <Container style={{ padding: '5em' }}>
+        <Home/>
         <Segment>
           {loading && <>
             <Segment>
