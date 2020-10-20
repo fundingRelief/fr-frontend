@@ -9,7 +9,7 @@ const OregonCampaignList = () => {
   const setLastPage = useSetLastPage();
 
   useEffect(() => {
-    setLastPage('/campaigns/central-cal-fires');
+    setLastPage('/campaigns/oregon-fires');
   }, [campaigns]);
 
   function filterOregon(arr) {
