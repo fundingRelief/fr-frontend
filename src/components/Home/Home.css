@@ -1,0 +1,36 @@
+
+.container {
+  background-color: black;
+}
+.p1 {
+min-height: 300px; 
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0em 21em 0em 21em;
+background-color: black;
+color: white
+/* background-color: rgb(202, 196, 196) */
+}
+
+.p2 {
+  min-height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 21em 0em 21em;
+  background-color: black;
+  color: white
+  /* background-color:teal */
+  }
+
+.p3 {
+  min-height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 21em 0em 21em;
+  background-color: black;
+  color: white
+  /* background-color: rgb(202, 196, 196) */
+}

@@ -14,8 +14,8 @@ const CampaignList = () => {
 
   return (
     <>
+      <Home/>
       <Container style={{ padding: '5em' }}>
-        <Home/>
         <Segment>
           {loading && <>
             <Segment>
