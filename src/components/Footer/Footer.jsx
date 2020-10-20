@@ -13,11 +13,8 @@ const Footer = () => {
             <div className="three wide colum">
               <h4 className="ui inverted header">About</h4>
               <div className="ui inverted link list">
-                <a href="#" className="item">
+                <a href={'/about'} className="item">
                     The Site
-                </a>
-                <a href="#" className="item">
-                    The Developers
                 </a>
                 <a href="#" className="item">
                     Contact Us

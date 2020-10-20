@@ -1,21 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import List from '../../components/List/List';
+import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import { fetchListWashington } from '../../services/fundingReliefAPI';
+import { useGetCampaigns } from '../../hooks/getCampaigns';
 
 const WashingtonCampaignList = () => {
-  const [campaigns, setCampaigns] = useState([]);
-
-  useEffect(() => {
-    fetchListWashington().then((fetchWashingtonCampaignList) =>
-      setCampaigns(fetchWashingtonCampaignList)
-    );
-  }, []);
+  const { campaigns, loading } = useGetCampaigns(fetchListWashington);
 
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
-  return <>{campaignNodes}</>;
+  return (
+    <>
+      <Container style={{ padding: '5em' }}>
+        <Segment>
+          {loading && <>
+            <Segment>
+              <Dimmer active inverted>
+                <Loader inverted>Loading</Loader>
+              </Dimmer>
+              <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
+            </Segment><br /></>}
+          <Card.Group 
+            itemsPerRow={3}
+            stackable={true}>
+            {campaignNodes}
+          </Card.Group>
+        </Segment>
+      </Container>
+    </>
+  );
 };
 
 export default WashingtonCampaignList;

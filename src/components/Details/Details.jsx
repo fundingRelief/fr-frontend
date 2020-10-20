@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Icon, Image, Container, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import styles from './Details.css';
 
@@ -13,38 +14,36 @@ const Details = ({
   link_url,
   description,
   last_donation,
-  cause,
 }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
   return (
-    <section className={styles.Details}>
-      <h3>{campaign_name}</h3>
-      <h4>
-        ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '}
-        goal
-      </h4>
-      <h4>{percentage_raised}% fulfilled</h4>
-      <img src={img_url} />
-      <h4>
-        <a href={link_url} target="_blank" rel="noopener noreferrer">
-          GoFundMe link
-        </a>
-      </h4>
-      <h4>{location}</h4>
-      <p>{description}</p>
-      <h4>{last_donation}</h4>
-      <h4>
-        cause:{' '}
-        <a href={cause} target="_blank" rel="noopener noreferrer">
-          {cause}
-        </a>
-      </h4>
-      <h3>
+    <>
+      <Container text className={styles.Details}>
+      
+        <Image
+          centered
+          bordered rounded size="large"
+          src={img_url} alt="Fund being described."
+        />
+        <Header textAlign={'center'}>{campaign_name}</Header>
+        <p className={styles.Whatever}>
+          {description}
+        </p>
+        {location}
+        {last_donation}
+        ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '} goal
+        {percentage_raised}% fulfilled
+        
+        <Icon name="user" href={link_url} target="_blank" rel="noopener noreferrer">
+            Donate Now GoFundMe
+        </Icon>
+        <br />
         <Link to={'/'}>back</Link>
-      </h3>
-    </section>
+
+      </Container>
+    </>
   );
 };
 
