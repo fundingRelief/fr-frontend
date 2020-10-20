@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Icon, Image, Container, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import styles from './Details.css';
+import { useLastPage } from '../../hooks/CampaignsProvider';
 
 const Details = ({
   campaign_name,
@@ -18,6 +19,7 @@ const Details = ({
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
+  const lastPage = useLastPage();
   return (
     <>
       <Container text className={styles.Details}>
@@ -39,7 +41,7 @@ const Details = ({
             Donate Now GoFundMe
         </Icon>
         <br />
-        <Link to={'/'}>back</Link>
+        <Link to={lastPage}>back</Link>
 
       </Container>
     </>

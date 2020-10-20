@@ -6,56 +6,18 @@ import { fetchCampaigns } from '../services/fundingReliefAPI';
 const CampaignsContext = createContext();
 
 export const CampaignsProvider = ({ children }) => {
-
   const [campaigns, setCampaigns] = useState([]);
-
   const [loading, setLoading] = useState(false);
-
-  const [localCampaigns, setLocalCampaigns] = useState([]);
+  const [lastPage, setLastPage] = useState(null);
 
   useEffect(() => {
     setLoading(true);
     fetchCampaigns()
       .then(fetchedCampaigns => {
         setCampaigns(fetchedCampaigns);
-        localStorage.setItem('localCampaigns', JSON.stringify(fetchedCampaigns));
-        setLocalCampaigns(JSON.parse(localStorage.getItem('localCampaigns')));
         setLoading(false);
       });
   }, []);
-
-  // localStorage.setItem("localCampaigns", fetchedCampaigns);
-
-  // let localCampaigns = localStorage.getItem("localCampaigns");
-
-  // setLocalCampaigns(localStorage.getItem('localCampaigns'));
-
-  //   if (users) {
-  //     users = JSON.parse(users);
-  //     this.setState({ users });
-  //   } else {
-  //     fetch("https://jsonplaceholder.typicode.com/users")
-  //       .then(res => res.json())
-  //       .then(users => {
-  //         this.setState({ users });
-  //         localStorage.setItem("users", JSON.stringify(users));
-  //       });
-  //   }
-  // }
-
-  // handleClick = index => {
-  //   this.setState(
-  //     prevState => {
-  //       const users = [...prevState.users];
-  //       users.splice(index, 1);
-  //       return { users };
-  //     },
-  //     () => {
-  //       localStorage.setItem("users", JSON.stringify(this.state.users));
-  //     }
-  //   );
-  // };
-
 
   return (
     <CampaignsContext.Provider
@@ -63,8 +25,8 @@ export const CampaignsProvider = ({ children }) => {
         campaigns,
         loading,
         setLoading,
-        localCampaigns
-        
+        lastPage,
+        setLastPage
       }}
     >
       {children}
@@ -94,6 +56,16 @@ export const useSetLoading = () => {
 export const useLocalCampaigns = () => {
   const { localCampaigns } = useContext(CampaignsContext);
   return localCampaigns;
+};
+
+export const useLastPage = () => {
+  const { lastPage } = useContext(CampaignsContext);
+  return lastPage;
+};
+
+export const useSetLastPage = () => {
+  const { setLastPage } = useContext(CampaignsContext);
+  return setLastPage;
 };
 
 

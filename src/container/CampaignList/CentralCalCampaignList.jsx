@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
-import { fetchListCentralCal } from '../../services/fundingReliefAPI';
-import { useGetCampaigns } from '../../hooks/getCampaigns';
+import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const CentralCalCampaignList = () => {
-  const { campaigns, loading } = useGetCampaigns(fetchListCentralCal);
+  const fetchedCampaigns = useCampaign();
+  const fetchedLoading = useLoading();
+  const setLastPage = useSetLastPage();
 
-  const campaignNodes = campaigns.map((campaign) => {
+  useEffect(() => {
+    setLastPage('/campaigns/central-cal-fires');
+  }, [fetchedCampaigns]);
+
+  function filterCentralCal(arr) {
+    return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/central-california-fires');
+  }
+
+  const filteredCampaigns = filterCentralCal(fetchedCampaigns);
+
+  const campaignNodes = filteredCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
@@ -15,7 +26,7 @@ const CentralCalCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>  
-          {loading && <>
+          {fetchedLoading && <>
             <Segment>
               <Dimmer active inverted>
                 <Loader inverted>Loading</Loader>

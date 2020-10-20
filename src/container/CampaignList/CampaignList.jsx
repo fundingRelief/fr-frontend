@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import List from '../../components/List/List';
-import { useCampaign, useLoading, useLocalCampaigns, useSetLoading } from '../../hooks/getCampaigns';
+import { CampaignsProvider, useCampaign, useLoading, useLocalCampaigns, useSetLoading } from '../../hooks/CampaignsProvider';
 import { fetchCampaigns } from '../../services/fundingReliefAPI';
 
 const CampaignList = () => {
 
   const fetchedCampaigns = useCampaign();
   const fetchedLoading = useLoading();
-  const fetchedLocalCampaigns = useLocalCampaigns();
+  // const fetchedLocalCampaigns = useLocalCampaigns();
   // let fetchedSetLoading = useSetLoading();
 
   // const [loading, setLoading] = useState(false);
 
 
-  // const { campaigns, loading } = useGetCampaigns(fetchCampaigns);
+  // const { campaigns, loading } = CampaignsProvider(fetchCampaigns);
+
+  // CampaignsProvider(fetchCampaigns);
   // let fetchedCampaigns = [];
   // let fetchedLoading = [];
 
@@ -38,7 +40,7 @@ const CampaignList = () => {
   //   }
   // }, []);
 
-  const campaignNodes = fetchedLocalCampaigns.map((campaign) => {
+  const campaignNodes = fetchedCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
