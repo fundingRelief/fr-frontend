@@ -1,21 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import List from '../../components/List/List';
-import { useGetCampaigns } from '../../hooks/getCampaigns';
+import { useCampaign, useLoading, useLocalCampaigns, useSetLoading } from '../../hooks/getCampaigns';
 import { fetchCampaigns } from '../../services/fundingReliefAPI';
 
 const CampaignList = () => {
-  const { campaigns, loading } = useGetCampaigns(fetchCampaigns);
 
-  const campaignNodes = campaigns.map((campaign) => {
+  const fetchedCampaigns = useCampaign();
+  const fetchedLoading = useLoading();
+  const fetchedLocalCampaigns = useLocalCampaigns();
+  // let fetchedSetLoading = useSetLoading();
+
+  // const [loading, setLoading] = useState(false);
+
+
+  // const { campaigns, loading } = useGetCampaigns(fetchCampaigns);
+  // let fetchedCampaigns = [];
+  // let fetchedLoading = [];
+
+  // if(fetchedCampaigns.length === 0) {
+  //   const { campaigns, loading } = useGetCampaigns(fetchCampaigns);
+  //   fetchedCampaigns = campaigns;
+  //   fetchedLoading = loading;
+  // }
+
+  // if(fetchedCampaigns.length === 0) {
+  //   setLoading(true);
+  // } else {
+  //   setLoading(false);
+  // }
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if(fetchedCampaigns.length > 1) {
+  //     setLoading(false);
+  //   }
+  // }, []);
+
+  const campaignNodes = fetchedLocalCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
+
+  // console.log(campaigns);
 
   return (
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
-          {loading && <>
+          {fetchedLoading && <>
             <Segment>
               <Dimmer active inverted>
                 <Loader inverted>Loading</Loader>

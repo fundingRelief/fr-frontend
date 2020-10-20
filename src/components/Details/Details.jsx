@@ -21,7 +21,6 @@ const Details = ({
   return (
     <>
       <Container text className={styles.Details}>
-      
         <Image
           centered
           bordered rounded size="large"

@@ -33,7 +33,6 @@ const List = ({
             className={styles.cardImg}
           />
         </Link>
-
         <Link className={styles.link} to={`/campaigns/${id}`}>
           <Card.Header 
             className={styles.header}
