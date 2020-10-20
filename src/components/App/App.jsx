@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import CampaignList from '../../container/CampaignList/CampaignList';
 import CampaignDetail from '../../container/CampaignDetail/CampaignDetail';
 // import OregonCampaignList from '../../container/CampaignList/OregonCampaignList';
-// import NoCalCampaignList from '../../container/CampaignList/NoCalCampaignList';
+import NoCalCampaignList from '../../container/CampaignList/NoCalCampaignList';
 // import SoCalCampaignList from '../../container/CampaignList/SoCalCampaignList';
 import CentralCalCampaignList from '../../container/CampaignList/CentralCalCampaignList';
 // import WashingtonCampaignList from '../../container/CampaignList/WashingtonCampaignList';
@@ -23,6 +23,11 @@ export default function App() {
               exact
               path="/campaigns/central-cal-fires"
               component={CentralCalCampaignList}
+            />
+            <Route
+              exact
+              path="/campaigns/no-cal-fires"
+              component={NoCalCampaignList}
             />
             {/* <Route exact path="/campaigns" component={CampaignList} /> */}
             {/* <Route

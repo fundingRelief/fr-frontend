@@ -4,19 +4,19 @@ import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-rea
 import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const CentralCalCampaignList = () => {
-  const fetchedCampaigns = useCampaign();
-  const fetchedLoading = useLoading();
+  const campaigns = useCampaign();
+  const loading = useLoading();
   const setLastPage = useSetLastPage();
 
   useEffect(() => {
     setLastPage('/campaigns/central-cal-fires');
-  }, [fetchedCampaigns]);
+  }, [campaigns]);
 
   function filterCentralCal(arr) {
     return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/central-california-fires');
   }
 
-  const filteredCampaigns = filterCentralCal(fetchedCampaigns);
+  const filteredCampaigns = filterCentralCal(campaigns);
 
   const campaignNodes = filteredCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
@@ -26,7 +26,7 @@ const CentralCalCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>  
-          {fetchedLoading && <>
+          {loading && <>
             <Segment>
               <Dimmer active inverted>
                 <Loader inverted>Loading</Loader>
