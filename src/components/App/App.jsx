@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import CampaignList from '../../container/CampaignList/CampaignList';
 import CampaignDetail from '../../container/CampaignDetail/CampaignDetail';
-// import OregonCampaignList from '../../container/CampaignList/OregonCampaignList';
+import OregonCampaignList from '../../container/CampaignList/OregonCampaignList';
 import NoCalCampaignList from '../../container/CampaignList/NoCalCampaignList';
 // import SoCalCampaignList from '../../container/CampaignList/SoCalCampaignList';
 import CentralCalCampaignList from '../../container/CampaignList/CentralCalCampaignList';
@@ -28,6 +28,11 @@ export default function App() {
               exact
               path="/campaigns/no-cal-fires"
               component={NoCalCampaignList}
+            />
+            <Route
+              exact
+              path="/campaigns/oregon-fires"
+              component={OregonCampaignList}
             />
             {/* <Route exact path="/campaigns" component={CampaignList} /> */}
             {/* <Route
