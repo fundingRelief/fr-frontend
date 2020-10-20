@@ -1,50 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import List from '../../components/List/List';
-import { CampaignsProvider, useCampaign, useLoading, useLocalCampaigns, useSetLoading } from '../../hooks/CampaignsProvider';
-import { fetchCampaigns } from '../../services/fundingReliefAPI';
+import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const CampaignList = () => {
-
   const fetchedCampaigns = useCampaign();
   const fetchedLoading = useLoading();
-  // const fetchedLocalCampaigns = useLocalCampaigns();
-  // let fetchedSetLoading = useSetLoading();
+  const setLastPage = useSetLastPage();
 
-  // const [loading, setLoading] = useState(false);
-
-
-  // const { campaigns, loading } = CampaignsProvider(fetchCampaigns);
-
-  // CampaignsProvider(fetchCampaigns);
-  // let fetchedCampaigns = [];
-  // let fetchedLoading = [];
-
-  // if(fetchedCampaigns.length === 0) {
-  //   const { campaigns, loading } = useGetCampaigns(fetchCampaigns);
-  //   fetchedCampaigns = campaigns;
-  //   fetchedLoading = loading;
-  // }
-
-  // if(fetchedCampaigns.length === 0) {
-  //   setLoading(true);
-  // } else {
-  //   setLoading(false);
-  // }
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   if(fetchedCampaigns.length > 1) {
-  //     setLoading(false);
-  //   }
-  // }, []);
+  useEffect(() => {
+    setLastPage('/');
+  }, [fetchedCampaigns]);
 
   const campaignNodes = fetchedCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
-
-  // console.log(campaigns);
 
   return (
     <>
