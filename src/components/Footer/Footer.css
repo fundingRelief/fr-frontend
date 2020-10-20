@@ -1,9 +1,4 @@
-// .pusher {
-//   display: flex;
-//   min-height: 100vh;
-//   flex-direction: column;
-// }
-
-// .pusher > .footer {
-//   flex: 1;
-// }
+#footer {position: relative;
+  margin-top: -150px;
+  height: 150px;
+  clear: both;}
