@@ -27,16 +27,16 @@ const Header = () => {
                     <Dropdown.Item>
                       <Link to={'/campaigns/no-cal-fires'}>Nor-Cal Fires</Link> 
                     </Dropdown.Item>
-                    <Dropdown.Item href={'/campaigns/central-cal-fires'}>
+                    <Dropdown.Item>
                       <Link to={'/campaigns/central-cal-fires'}>Central-Cal Fires</Link>
                     </Dropdown.Item>
-                    <Dropdown.Item href={'/campaigns/so-cal-fires'}>
-                        So-Cal Fires
+                    <Dropdown.Item>                        
+                      <Link to={'/campaigns/so-cal-fires'}>So-Cal Fires</Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Oregon</Dropdown.Header>
-                    <Dropdown.Item href={'/campaigns/oregon-fires'}>
-                        Oregon Fires (All)
+                    <Dropdown.Item>
+                      <Link to={'/campaigns/oregon-fires'}>Oregon Fires (All)</Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Washington</Dropdown.Header>
