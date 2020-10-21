@@ -25,23 +25,23 @@ const Header = () => {
                   <Dropdown.Menu>
                     <Dropdown.Header>California</Dropdown.Header>
                     <Dropdown.Item>
-                      <Link to={'/campaigns/no-cal-fires'}>Nor-Cal Fires</Link> 
+                      <Link to={'/campaigns/no-cal-fires'} style={{color:'black'}}>Nor-Cal Fires</Link> 
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <Link to={'/campaigns/central-cal-fires'}>Central-Cal Fires</Link>
+                      <Link to={'/campaigns/central-cal-fires'}style={{color:'black'}}>Central-Cal Fires</Link>
                     </Dropdown.Item>
                     <Dropdown.Item>                        
-                      <Link to={'/campaigns/so-cal-fires'}>So-Cal Fires</Link>
+                      <Link to={'/campaigns/so-cal-fires'}style={{color:'black'}}>So-Cal Fires</Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Oregon</Dropdown.Header>
                     <Dropdown.Item>
-                      <Link to={'/campaigns/oregon-fires'}>Oregon Fires (All)</Link>
+                      <Link to={'/campaigns/oregon-fires'}style={{color:'black'}}>Oregon Fires (All)</Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Washington</Dropdown.Header>
                     <Dropdown.Item>                       
-                      <Link to={'/campaigns/washington-fires'}>Washington Fires (All)</Link>
+                      <Link to={'/campaigns/washington-fires'}style={{color:'black'}}>Washington Fires (All)</Link>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
