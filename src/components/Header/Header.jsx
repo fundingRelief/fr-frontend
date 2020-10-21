@@ -40,8 +40,8 @@ const Header = () => {
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Washington</Dropdown.Header>
-                    <Dropdown.Item href={'/campaigns/washington-fires'}>
-                        Washington Fires (All)
+                    <Dropdown.Item href={'/campaigns/washington-fires'}>                       
+                      <Link to={'/campaigns/washington-fires'}>Washington Fires (All)</Link>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

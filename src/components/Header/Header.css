@@ -47,19 +47,19 @@ header {
   }
 }
 
-.container{
+.container {
   background-color: teal;
   color: white;
   font-family: 'Comfortaa', cursive;
 }
 
-#segment{
+#segment {
   background-color: teal;
   color: white;
   font-family: 'Comfortaa', cursive;
 }
 
-.ui three item menu{
+.ui three item menu {
   color: white;
   font-family: 'Comfortaa', cursive;
 }
@@ -79,4 +79,3 @@ header {
   color: white;
   font-family: 'Comfortaa', cursive;
 }
-

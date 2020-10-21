@@ -21,6 +21,7 @@ const CampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
+          <h2>All Wildfire Relief Campaigns</h2>
           {loading && <>
             <Segment>
               <Dimmer active inverted>
