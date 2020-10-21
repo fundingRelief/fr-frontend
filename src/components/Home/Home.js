@@ -3,13 +3,7 @@ import styles from './Home.css'
 
 import {
   Container,
-  Divider,
   Grid, 
-  Icon,
-  Image,
-  Segment,
-  Header,
-  Button
 } from 'semantic-ui-react';
 
 const Home = () => {
@@ -19,7 +13,7 @@ return (
       textAlign='justified'
       fluid
       className={styles.container}>
-      <Grid columns={3} divided>
+    <Grid columns={3} divided>
           <Grid.Column className>
             <div className={styles.div1}>
               <h1 className={styles.header}>The Cause</h1>
@@ -38,15 +32,15 @@ return (
             <div className={styles.div2}>
               <h1 className={styles.header}>The Fix</h1>
               <p className={styles.p}> 
-                Our idea is simple and builds on the incredible platform GoFundMe has already built. We wanted to create a space that let's people browse all of the current wildfire funds on the West Coast to learn more about about individuals and communities in need. You can can see detailed information about each fund and when you're ready can go directly to that funds GoFundMe page to donate. What makes our site a bit different is that we wanted to ensure funds that are the furthest from reaching their goal make it to the top of the page. That's why when you will always those who still need the most relief at the top of the page. 
+                Our idea is simple and builds on the incredible platform GoFundMe has already built. We wanted to create a space that let's people browse all of the current wildfire funds on the West Coast to learn more about about individuals and communities in need.
+                You can can see detailed information about each fund and when you're ready can go directly to that funds GoFundMe page to donate. What makes our site a bit different is that we wanted to ensure funds that are the furthest from reaching their goal make it to the top of the page. That's why when you will always those who still need the most relief at the top of the page. 
               </p>
             </div>
           </Grid.Column>
-      </Grid>
+      </Grid> 
     </Container>
-)
+  )
 }
-
 
 export default Home;
 
