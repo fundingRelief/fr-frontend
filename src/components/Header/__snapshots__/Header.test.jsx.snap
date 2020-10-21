@@ -67,6 +67,11 @@ exports[`Header component renders Header 1`] = `
                 </DropdownHeader>
                 <DropdownItem>
                   <Link
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                     to="/campaigns/no-cal-fires"
                   >
                     Nor-Cal Fires
@@ -74,6 +79,11 @@ exports[`Header component renders Header 1`] = `
                 </DropdownItem>
                 <DropdownItem>
                   <Link
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                     to="/campaigns/central-cal-fires"
                   >
                     Central-Cal Fires
@@ -81,6 +91,11 @@ exports[`Header component renders Header 1`] = `
                 </DropdownItem>
                 <DropdownItem>
                   <Link
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                     to="/campaigns/so-cal-fires"
                   >
                     So-Cal Fires
@@ -92,6 +107,11 @@ exports[`Header component renders Header 1`] = `
                 </DropdownHeader>
                 <DropdownItem>
                   <Link
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                     to="/campaigns/oregon-fires"
                   >
                     Oregon Fires (All)
@@ -101,10 +121,13 @@ exports[`Header component renders Header 1`] = `
                 <DropdownHeader>
                   Washington
                 </DropdownHeader>
-                <DropdownItem
-                  href="/campaigns/washington-fires"
-                >
+                <DropdownItem>
                   <Link
+                    style={
+                      Object {
+                        "color": "black",
+                      }
+                    }
                     to="/campaigns/washington-fires"
                   >
                     Washington Fires (All)
@@ -116,10 +139,14 @@ exports[`Header component renders Header 1`] = `
         </DropdownMenu>
       </Dropdown>
       <MenuItem
-        href="/"
-        name="Funding Relief"
         position="right"
-      />
+      >
+        <Link
+          to="/"
+        >
+          Funding Relief
+        </Link>
+      </MenuItem>
     </Container>
   </Menu>
 </div>
