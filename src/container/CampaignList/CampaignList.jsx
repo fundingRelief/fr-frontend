@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useEffect } from 'react';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import List from '../../components/List/List';
 import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
@@ -16,8 +15,6 @@ const CampaignList = () => {
   const campaignNodes = campaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
-
-  //temp
 
   return (
     <>
