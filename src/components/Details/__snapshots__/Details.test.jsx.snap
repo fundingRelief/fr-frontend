@@ -8,7 +8,6 @@ exports[`Details component renders Details 1`] = `
       "lastPage": "/",
       "loading": false,
       "setLastPage": [Function],
-      "setLoading": [Function],
     }
   }
 >
