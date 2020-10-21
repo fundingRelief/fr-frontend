@@ -17,6 +17,8 @@ const CampaignList = () => {
     return <List key={campaign.id} {...campaign} />;
   });
 
+  //temp
+
   return (
     <>
       <Container style={{ padding: '5em' }}>
