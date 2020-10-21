@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
-// import { fetchListSoCal } from '../../services/fundingReliefAPI';
 import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const SoCalCampaignList = () => {
@@ -10,16 +9,16 @@ const SoCalCampaignList = () => {
   const setLastPage = useSetLastPage();
 
   useEffect(() => {
-    setLastPage('/campaigns/so-cal-fire');
+    setLastPage('/campaigns/so-cal-fires');
   }, [campaigns]);
 
   function filterSoCal(arr) {
-    return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/so-cal-fire')
+    return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/southern-california-fires')
   }
 
   const filteredCampaigns = filterSoCal(campaigns);
 
-  const campaignNodes = campaigns.map((campaign) => {
+  const campaignNodes = filteredCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
@@ -27,9 +26,9 @@ const SoCalCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
+          <h2>Southern California Wildfire Relief</h2>
           {loading && <>
             <Segment>
-              <h2>Southern California Wildfire Relief</h2>
               <Dimmer active inverted>
                 <Loader inverted>Loading</Loader>
               </Dimmer>

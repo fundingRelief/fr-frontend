@@ -24,7 +24,7 @@ const CampaignDetail = () => {
         <br />
         <br />
         <br />
-        <h1>loading</h1>;
+        <h1>loading</h1>
       </>
     );
   } else {
