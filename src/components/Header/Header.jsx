@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.css';
 import { Menu, Dropdown, Container } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -23,24 +24,24 @@ const Header = () => {
                 <Dropdown text="Wildfire" simple>
                   <Dropdown.Menu>
                     <Dropdown.Header>California</Dropdown.Header>
-                    <Dropdown.Item href={'/campaigns/no-cal-fires'}>
-                        Nor-Cal Fires
+                    <Dropdown.Item>
+                      <Link to={'/campaigns/no-cal-fires'}>Nor-Cal Fires</Link> 
                     </Dropdown.Item>
-                    <Dropdown.Item href={'/campaigns/central-cal-fires'}>
-                        Central-Cal Fires
+                    <Dropdown.Item>
+                      <Link to={'/campaigns/central-cal-fires'}>Central-Cal Fires</Link>
                     </Dropdown.Item>
-                    <Dropdown.Item href={'/campaigns/so-cal-fires'}>
-                        So-Cal Fires
+                    <Dropdown.Item>                        
+                      <Link to={'/campaigns/so-cal-fires'}>So-Cal Fires</Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Oregon</Dropdown.Header>
-                    <Dropdown.Item href={'/campaigns/oregon-fires'}>
-                        Oregon Fires (All)
+                    <Dropdown.Item>
+                      <Link to={'/campaigns/oregon-fires'}>Oregon Fires (All)</Link>
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Header>Washington</Dropdown.Header>
-                    <Dropdown.Item href={'/campaigns/washington-fires'}>
-                        Washington Fires (All)
+                    <Dropdown.Item href={'/campaigns/washington-fires'}>                       
+                      <Link to={'/campaigns/washington-fires'}>Washington Fires (All)</Link>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

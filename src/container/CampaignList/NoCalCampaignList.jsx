@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
-import { fetchListNoCal } from '../../services/fundingReliefAPI';
-import { useGetCampaigns } from '../../hooks/getCampaigns';
+import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const NoCalCampaignList = () => {
-  const { campaigns, loading } = useGetCampaigns(fetchListNoCal);
+  const campaigns = useCampaign();
+  const loading = useLoading();
+  const setLastPage = useSetLastPage();
 
-  const campaignNodes = campaigns.map((campaign) => {
+  useEffect(() => {
+    setLastPage('/campaigns/no-cal-fires');
+  }, [campaigns]);
+
+  function filterNoCal(arr) {
+    return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/northern-california-fires');
+  }
+
+  const filteredCampaigns = filterNoCal(campaigns);
+
+  const campaignNodes = filteredCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
   return (
     <>
       <Container style={{ padding: '5em' }}>
-        <Segment>
+        <Segment>  
+          <h2>Northern California Wildfire Relief</h2>
           {loading && <>
             <Segment>
               <Dimmer active inverted>
@@ -34,3 +46,4 @@ const NoCalCampaignList = () => {
 };
 
 export default NoCalCampaignList;
+

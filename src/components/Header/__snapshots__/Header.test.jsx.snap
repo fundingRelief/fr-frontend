@@ -65,29 +65,37 @@ exports[`Header component renders Header 1`] = `
                 <DropdownHeader>
                   California
                 </DropdownHeader>
-                <DropdownItem
-                  href="/campaigns/no-cal-fires"
-                >
-                  Nor-Cal Fires
+                <DropdownItem>
+                  <Link
+                    to="/campaigns/no-cal-fires"
+                  >
+                    Nor-Cal Fires
+                  </Link>
                 </DropdownItem>
-                <DropdownItem
-                  href="/campaigns/central-cal-fires"
-                >
-                  Central-Cal Fires
+                <DropdownItem>
+                  <Link
+                    to="/campaigns/central-cal-fires"
+                  >
+                    Central-Cal Fires
+                  </Link>
                 </DropdownItem>
-                <DropdownItem
-                  href="/campaigns/so-cal-fires"
-                >
-                  So-Cal Fires
+                <DropdownItem>
+                  <Link
+                    to="/campaigns/so-cal-fires"
+                  >
+                    So-Cal Fires
+                  </Link>
                 </DropdownItem>
                 <DropdownDivider />
                 <DropdownHeader>
                   Oregon
                 </DropdownHeader>
-                <DropdownItem
-                  href="/campaigns/oregon-fires"
-                >
-                  Oregon Fires (All)
+                <DropdownItem>
+                  <Link
+                    to="/campaigns/oregon-fires"
+                  >
+                    Oregon Fires (All)
+                  </Link>
                 </DropdownItem>
                 <DropdownDivider />
                 <DropdownHeader>
@@ -96,7 +104,11 @@ exports[`Header component renders Header 1`] = `
                 <DropdownItem
                   href="/campaigns/washington-fires"
                 >
-                  Washington Fires (All)
+                  <Link
+                    to="/campaigns/washington-fires"
+                  >
+                    Washington Fires (All)
+                  </Link>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>

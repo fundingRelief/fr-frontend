@@ -17,6 +17,7 @@ const WashingtonCampaignList = () => {
         <Segment>
           {loading && <>
             <Segment>
+              <h2>Washington Wildfire Relief</h2>
               <Dimmer active inverted>
                 <Loader inverted>Loading</Loader>
               </Dimmer>

@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import List from '../../components/List/List';
 import { Card, Container, Dimmer, Image, Loader, Segment } from 'semantic-ui-react';
-import { fetchListOregon } from '../../services/fundingReliefAPI';
-import { useGetCampaigns } from '../../hooks/getCampaigns';
+import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const OregonCampaignList = () => {
-  const { campaigns, loading } = useGetCampaigns(fetchListOregon);
+  const campaigns = useCampaign();
+  const loading = useLoading();
+  const setLastPage = useSetLastPage();
 
-  const campaignNodes = campaigns.map((campaign) => {
+  useEffect(() => {
+    setLastPage('/campaigns/oregon-fires');
+  }, [campaigns]);
+
+  function filterOregon(arr) {
+    return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/oregon-fires');
+  }
+
+  const filteredCampaigns = filterOregon(campaigns);
+
+  const campaignNodes = filteredCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
@@ -15,6 +26,7 @@ const OregonCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
+          <h2>Oregon Wildfire Relief</h2>
           {loading && <>
             <Segment>
               <Dimmer active inverted>
