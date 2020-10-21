@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
 import List from '../../components/List/List';
+import Home from '../../components/Home/Home';
 import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const CampaignList = () => {
@@ -18,6 +19,7 @@ const CampaignList = () => {
 
   return (
     <>
+      <Home/>
       <Container style={{ padding: '5em' }}>
         <Segment>
           <h2>All Wildfire Relief Campaigns</h2>
