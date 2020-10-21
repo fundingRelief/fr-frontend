@@ -8,7 +8,7 @@ const CampaignsContext = createContext();
 export const CampaignsProvider = ({ children }) => {
   const [campaigns, setCampaigns] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [lastPage, setLastPage] = useState(null);
+  const [lastPage, setLastPage] = useState('/');
 
   useEffect(() => {
     setLoading(true);

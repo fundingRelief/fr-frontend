@@ -19,7 +19,9 @@ const Details = ({
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
+
   const lastPage = useLastPage();
+
   return (
     <>
       <Container text className={styles.Details}>
@@ -60,6 +62,7 @@ Details.propTypes = {
   description: PropTypes.string.isRequired,
   last_donation: PropTypes.string.isRequired,
   cause: PropTypes.string.isRequired,
+  lastPage: PropTypes.string,
 };
 
 export default Details;
