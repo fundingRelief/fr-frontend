@@ -18,10 +18,21 @@ const CampaignDetail = () => {
     return <Details key={detail.id} {...detail} />;
   });
 
-  if(!campaign)
-    return <h1>loading</h1>;
+  if(campaign.length === 0){
+    return (
+      <>
+        <br />
+        <br />
+        <br />
+        <h1>loading</h1>;
+      </>
+    );
+  } else {
+    return <>{campaignNodes}</>;
+  }
+    
 
-  return <>{campaignNodes}</>;
+  
 };
 
 export default CampaignDetail;
