@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import List from '../../components/List/List';
 import { Card, Segment, Container, Dimmer, Loader, Image } from 'semantic-ui-react';
-import { fetchListWashington } from '../../services/fundingReliefAPI';
-import { useGetCampaigns } from '../../hooks/getCampaigns';
+import { useCampaign, useLoading, useSetLastPage } from '../../hooks/CampaignsProvider';
 
 const WashingtonCampaignList = () => {
-  const { campaigns, loading } = useGetCampaigns(fetchListWashington);
+  const campaigns = useCampaign();
+  const loading = useLoading();
+  const setLastPage = useSetLastPage();
 
-  const campaignNodes = campaigns.map((campaign) => {
+  useEffect(() => {
+    setLastPage('/campaigns/washington-fires');
+  }, [campaigns]);
+
+  function filterWashington(arr) {
+    return arr.filter(campaign => campaign.cause === 'https://www.gofundme.com/c/act/washington-fires');
+  }
+
+  const filteredCampaigns = filterWashington(campaigns);
+
+  const campaignNodes = filteredCampaigns.map((campaign) => {
     return <List key={campaign.id} {...campaign} />;
   });
 
@@ -15,9 +26,9 @@ const WashingtonCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
+            <h2>Washington Wildfire Relief</h2>
           {loading && <>
             <Segment>
-              <h2>Washington Wildfire Relief</h2>
               <Dimmer active inverted>
                 <Loader inverted>Loading</Loader>
               </Dimmer>

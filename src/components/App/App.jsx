@@ -7,7 +7,7 @@ import OregonCampaignList from '../../container/CampaignList/OregonCampaignList'
 import NoCalCampaignList from '../../container/CampaignList/NoCalCampaignList';
 import CentralCalCampaignList from '../../container/CampaignList/CentralCalCampaignList';
 import SoCalCampaignList from '../../container/CampaignList/SoCalCampaignList';
-// import WashingtonCampaignList from '../../container/CampaignList/WashingtonCampaignList';
+import WashingtonCampaignList from '../../container/CampaignList/WashingtonCampaignList';
 import About from '../About/About';
 import { CampaignsProvider } from '../../hooks/CampaignsProvider';
 
@@ -40,11 +40,11 @@ export default function App() {
               path="/campaigns/so-cal-fires"
               component={SoCalCampaignList}
             />
-            {/*<Route
+           <Route
               exact
               path="/campaigns/washington-fires"
               component={WashingtonCampaignList}
-            />  */}
+            />  
             <Route exact path="/campaigns/:id?" component={CampaignDetail} />
             <Route exact path="/about" component={About} />
           </Switch>
