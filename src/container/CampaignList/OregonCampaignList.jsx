@@ -26,6 +26,7 @@ const OregonCampaignList = () => {
     <>
       <Container style={{ padding: '5em' }}>
         <Segment>
+          <h2>Oregon Wildfire Relief</h2>
           {loading && <>
             <Segment>
               <Dimmer active inverted>
