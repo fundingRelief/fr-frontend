@@ -21,4 +21,11 @@
   a:active {
     color: rgba(40, 167, 118, 0.6);
   }
+
+  .Info {
+    text-align: center;
+  }
+  .Description {
+    text-align: center;
+  }
 }

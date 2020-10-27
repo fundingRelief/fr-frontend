@@ -38,14 +38,14 @@ const Details = ({
             className={styles.progressBar}
             color="teal"/>
         </span>
-        <p><a href={link_url} target="_blank" rel="noopener noreferrer">
+        <p className={styles.Info}><a href={link_url} target="_blank" rel="noopener noreferrer">
           <Icon name="user" />
               Donate Now at GoFundMe
         </a> {' '} | {' '} {location} | {' '}
         {last_donation} | {' '}
-          ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}{' '} goal
+          ${numberWithCommas(current_amount)} out of ${numberWithCommas(goal)}
         </p>
-        <p className={styles.Whatever}>
+        <p>
           {description}
         </p>
         <Link to={lastPage}>{'< '}back</Link>
