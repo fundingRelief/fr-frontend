@@ -24,7 +24,9 @@ const List = ({
   return (
     <Card 
       color="teal"
-      raised={true}>
+      raised={true}
+      className={styles.List}
+    >
       <Card.Content>
         <Link className={styles.link} to={`/campaigns/${id}`}>
           <Image 
